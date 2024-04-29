@@ -32,11 +32,6 @@ const octokit = new MyOctokit({
 
 async function run() {
   try {
-    const error = new Error("Oops!");
-    error.status = 401;
-
-    throw error
-
     const { updated, data } = await octokit.createOrUpdateTextFile({
       owner: "erick-sudo",
       repo: "erick-sudo",
@@ -47,15 +42,11 @@ async function run() {
 
     console.log("Booped succesfully");
   } catch (error) {
-    if (error.status !== 401) {
-      throw error;
-    }
-
     const { data: issue } = await octokit.request(
       "POST /repos/{owner}/{repo}/issues",
       {
         owner: "erick-sudo",
-        repo: "erick-sudo",
+        repo: "issue-test",
         title: "plz to boop",
         body: "I bestow upon you my finest of boops",
       }
