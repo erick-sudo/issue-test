@@ -13,6 +13,7 @@
     "@octokit/auth-oauth-device": "^7.1.1",
     "@octokit/core": "^6.1.2",
     "@octokit/plugin-create-or-update-text-file": "^5.1.0",
+    "netlify-cli": "^17.23.1",
     "octokit": "^3.2.0"
   }
 }

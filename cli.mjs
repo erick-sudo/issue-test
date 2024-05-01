@@ -32,7 +32,7 @@ const octokit = new MyOctokit({
 
 async function run() {
   try {
-    const { updated, data } = await octokit.createOrUpdateTextFile({
+    await octokit.createOrUpdateTextFile({
       owner: "erick-sudo",
       repo: "erick-sudo",
       path: "README.md",
