@@ -15,6 +15,7 @@ const octokit = new MyOctokit({
     clientId: "4f80b7142fcda7202ba7",
     scopes: ["public_repo"],
     onVerification(verification) {
+      
       // verification example
       // {
       //   device_code: "3584d83530557fdd1f46af8289938c8ef79f9dc5",
