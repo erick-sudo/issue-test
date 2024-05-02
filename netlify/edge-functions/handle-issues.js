@@ -7,7 +7,7 @@ const MyOctokit = Octokit.plugin(createOrUpdateTextFile).defaults({
 
 const app = new App({
   appId: process.env.APP_ID,
-  privateKey: process.env.PRIVATE_KEY,
+  privateKey: process.env.PRIVATE_KEY.replace(/\\n/gm, "\n"),
   webhooks: {
     secret: process.env.WEBHOOK_SECRET,
   },
